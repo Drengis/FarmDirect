@@ -1,0 +1,34 @@
+
+# React
+# Logs
+/FarmDirectFront/logs
+/FarmDirectFront/*.log
+/FarmDirectFront/npm-debug.log*
+/FarmDirectFront/yarn-debug.log*
+/FarmDirectFront/yarn-error.log*
+/FarmDirectFront/pnpm-debug.log*
+/FarmDirectFront/lerna-debug.log*
+
+/FarmDirectFront/node_modules
+/FarmDirectFront/dist
+/FarmDirectFront/dist-ssr
+/FarmDirectFront/*.local
+
+# Editor directories and files
+/FarmDirectFront/.vscode/*
+!.vscode/extensions.json
+/FarmDirectFront/.idea
+/FarmDirectFront/.DS_Store
+/FarmDirectFront/*.suo
+/FarmDirectFront/*.ntvs*
+/FarmDirectFront/*.njsproj
+/FarmDirectFront/*.sln
+/FarmDirectFront/*.sw?
+
+
+# Django
+
+/FarmDirectBack/db.sqlite3
+/FarmDirectBack/FarmDirect/__pycache__
+/FarmDirectBack/FarmDirect_api/__pycache__
+/FarmDirectBack/FarmDirect_api/migrations
