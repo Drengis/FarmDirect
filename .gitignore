@@ -1,4 +1,6 @@
 
+.history
+
 # React
 # Logs
 /FarmDirectFront/logs
@@ -27,7 +29,6 @@
 
 
 # Django
-
 /FarmDirectBack/db.sqlite3
 /FarmDirectBack/FarmDirect/__pycache__
 /FarmDirectBack/FarmDirect_api/__pycache__
