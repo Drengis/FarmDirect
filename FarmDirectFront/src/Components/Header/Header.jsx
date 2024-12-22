@@ -6,8 +6,13 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div className="header">
-            <Link to='/'><Button name='Домашняя старница' /></Link>
-            <Link to='/medicine'><Button name='Препараты' /></Link>
+            <div className='Link_buttons'>
+                <Link to='/'><Button name='Домашняя старница' /></Link>
+                <Link to='/medicine'><Button name='Препараты' /></Link>
+            </div>
+            <div className='LogoConteiner'>
+                <h2 className='Logo'> Farm-Direct </h2>
+            </div>
         </div>
     );
 };
