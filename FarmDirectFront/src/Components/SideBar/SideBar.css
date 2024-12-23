@@ -1,0 +1,38 @@
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+
+}
+
+.Sidebar.open {
+    left: 0;
+}
+
+.Sidebar-Item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
+.Close-btn-Conteiner {
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+}
+
+
+.Close-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
