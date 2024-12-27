@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // Убедитесь, что Bootstrap подключен
-import './Button.css';
+import './Custom_Button.css';
 
-const Button = (props) => {
+const Custom_Button = (props) => {
     return (
         <button
             onClick={props.onClick}
@@ -13,4 +13,4 @@ const Button = (props) => {
     );
 };
 
-export default Button;
+export default Custom_Button;

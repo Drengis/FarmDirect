@@ -27,3 +27,33 @@ button {
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+.Search {
+    margin-top: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.ResultsOverlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.ResultButton {
+    width: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .LogoConteiner {
+        display: none;
+    }
+}

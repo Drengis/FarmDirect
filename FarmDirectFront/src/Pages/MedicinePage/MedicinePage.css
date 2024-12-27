@@ -1,16 +1,41 @@
 .MedicinePage_Container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 5px;
     height: 100%;
-
+    justify-content: space-evenly;
 }
 
-.Search {
+
+.MedicineTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.MedicinesList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
     padding: 10px;
-    width: 20%;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    margin: 10px;
-    height: 100%;
+}
+
+.MedicineInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.InfoItem {
+    background: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .MedicineInfo {
+        grid-template-columns: 1fr;
+    }
 }
