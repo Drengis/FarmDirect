@@ -1,11 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; // Убедитесь, что Bootstrap подключен
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './Custom_Button.css';
 
 const Custom_Button = (props) => {
     return (
         <button
             onClick={props.onClick}
-            className={`btn ${props.disabled ? 'btn-secondary' : 'btn-primary'}`} // Используем классы Bootstrap
+            className={`btn ${props.disabled ? 'btn-secondary' : 'btn-primary'}`} 
             disabled={props.disabled}
         >
             {props.name}

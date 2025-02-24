@@ -25,7 +25,7 @@ const Header = () => {
 
     const props = [
         { name: 'Главная', path: '/' },
-        { name: 'Препараты', path: '/medicine_list' },
+        { name: 'АТХ', path: '/medicine_list' },
     ];
 
     const checkWindowSize = () => {
@@ -58,7 +58,7 @@ const Header = () => {
             ) : (
                 <div className='Link_buttons'>
                     <Link to='/'><Custom_Button name='Главная' /></Link>
-                    <Link to='/medicine_list'><Custom_Button name='Препараты' /></Link>
+                    <Link to='/medicine_list'><Custom_Button name='АТХ' /></Link>
                 </div>
             )}
             <div className='Search'>
