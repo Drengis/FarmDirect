@@ -31,5 +31,12 @@
 # Django
 /FarmDirectBack/db.sqlite3
 /FarmDirectBack/FarmDirect/__pycache__
-/FarmDirectBack/FarmDirect_api/__pycache__
+/FarmDirectBack/db_config.py
+/FarmDirectBack/FarmDirect/db_config.py
+
 /FarmDirectBack/FarmDirect_api/migrations
+/FarmDirectBack/FarmDirect_api/__pycache__
+
+FarmDirectBack/FarmDirect/db_settings.py
+FarmDirectBack/db_settings.py
+FarmDirectBack/__pycache__
