@@ -15,8 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from FarmDirect_api.views import ATCViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/atcs/', ATCViewSet.as_view({'get': 'get_all'}), name='atc-get-all'),  # Все записи
+    path('api/atcs/<int:pk>/', ATCViewSet.as_view({'get': 'get_by_id'}), name='atc-get-by-id'),  # По id
 ]

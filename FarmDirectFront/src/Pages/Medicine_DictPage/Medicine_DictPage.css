@@ -1,7 +1,52 @@
 .Medicine_DictPage_Conteiner {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-around;
     width: 100%;
     padding: 10px;
+}
+
+
+.ATC_classification {
+    width: 35%;
+}
+
+.ICD_classification {
+    width: 35%;
+}
+
+
+.atc-link {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.atc-level-1 {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.atc-level-2 {
+    font-size: 16px;
+}
+
+.atc-level-3 {
+    font-size: 14px;
+}
+
+.children {
+    margin-left: 20px;
+}
+
+.atc-code-name {
+    display: flex;
+    align-items: center;
+}
+
+.atc-code {
+    white-space: nowrap;
+    margin-right: 10px;
+    font-weight: bold;
 }
