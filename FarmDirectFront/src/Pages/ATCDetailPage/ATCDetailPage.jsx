@@ -7,15 +7,26 @@ import { Link } from 'react-router-dom';  // Импортируем Link для 
 
 const ATCDetailPage = () => {
     const [atc, setAtc] = useState(null);
+    const [parentChain, setParentChain] = useState([]);  // Для хранения цепочки родительских категорий
     const { id } = useParams();  // Получаем ID из URL
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/atcs/${id}`)  // Запрос для получения данных по ID
+        // Загружаем данные текущей категории
+        axios.get(`http://127.0.0.1:8000/api/atc/${id}`)
             .then((response) => {
                 setAtc(response.data);
             })
             .catch((error) => {
                 console.error('Ошибка при получении данных:', error);
+            });
+
+        // Загружаем цепочку родительских категорий
+        axios.get(`http://127.0.0.1:8000/api/atc/${id}/parents/`)
+            .then((response) => {
+                setParentChain(response.data.parent_chain);  // Устанавливаем цепочку родительских категорий
+            })
+            .catch((error) => {
+                console.error('Ошибка при получении цепочки родительских категорий:', error);
             });
     }, [id]);
 
@@ -28,7 +39,19 @@ const ATCDetailPage = () => {
             <Header />
             <div className="ATCDetailPage_Conteiner">
                 <div className="atc-detail">
-                    <h1>{atc.parent.code} - {atc.parent ? atc.parent.name : 'Нет родительской категории'}</h1>
+                    <div className='way-site'>
+                        <ul className="parent-chain">
+                            {parentChain.reverse().map((parent, index) => (
+                                <li key={parent.id} className="parent-item">
+                                    <Link to={`/atc/${parent.id}`} className="atc-link">
+                                        {parent.code} - {parent.name}
+                                    </Link>
+                                    {index < parentChain.length - 1 && <span className="separator"> / </span>}  {/* Разделитель между элементами цепочки */}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <h1>{atc.parent ? `${atc.parent.code} - ${atc.parent.name}` : 'Нет родительской категории'}</h1>
                     <div className="children">
                         {atc.children && atc.children.length > 0 && (
                             <div>

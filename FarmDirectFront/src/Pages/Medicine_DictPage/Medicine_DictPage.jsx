@@ -9,7 +9,7 @@ const MedicineDictPage = () => {
     const [open, setOpen] = useState(null);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/atcs')
+        axios.get('http://127.0.0.1:8000/api/atc')
             .then((response) => {
                 setAtcs(response.data);
             })
@@ -74,9 +74,9 @@ const MedicineDictPage = () => {
                     <h1>Классификация АТС</h1>
                     <div>{renderATC(atcTree)}</div>
                 </div>
-                <div className="IDC_classification">
+                {/* <div className="IDC_classification">
                     <h1>Классификация МКБ</h1>
-                </div>
+                </div> */}
             </div>
         </div>
     );

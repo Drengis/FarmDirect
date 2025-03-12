@@ -21,37 +21,43 @@ h2 {
 }
 
 .children {
-    margin-top: 20px;
+    padding: 10px;
 }
 
 .children ul {
     list-style-type: none;
     padding-left: 0;
+    text-align: left;
 }
 
 .children li {
     font-size: 16px;
 }
 
-.way-site {
-    margin-bottom: 20px;
-}
-
-.way-site ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.way-site li {
-    display: inline;
-}
-
 .atc-link {
     text-decoration: none;
     color: #2f4f98;
+
 }
 
 .atc-code {
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.parent-chain {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.parent-item {
+    display: flex;
+    align-items: center;
+}
+
+.separator {
+    margin: 0 5px;
 }
