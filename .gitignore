@@ -40,3 +40,4 @@
 FarmDirectBack/FarmDirect/db_settings.py
 FarmDirectBack/db_settings.py
 FarmDirectBack/__pycache__
+other scripts/loadATC.py
